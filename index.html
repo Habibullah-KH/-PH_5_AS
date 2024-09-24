@@ -46,6 +46,8 @@
 <body class="mx-w-[1920px] m-auto font-fontprimary text-clrNutral400 ">
   
 
+<!--*  header section start  -->
+
 <header class="sticky top-0 z-50 w-full m-auto">
 
   <section class="nav text-2xl font-bold">
@@ -53,7 +55,7 @@
 
       <div class="nav-top-section flex justify-between bg-[#f9f7f3B3] p-10">
 
-        <a  href="./Allcode/qna.html" target="_blank">
+        <a  href="./Allcode/qna.html">
           <button class="btn text-2xl font-semibold px-5 bg-clrNutral200 hover:bg-slate-900 hover:text-white">Blog</button>
           </a>
     
@@ -69,7 +71,7 @@
           </div>
       </div>
       
-<div class="nav-button-section flex justify-center gap-5 pt-8 pb-10">
+<div class="nav-button-section flex justify-center gap-5 pt-8 pb-10 border-b-2">
 
   <button id="donationBtn" class=" btn text-2xl font-semibold px-5 hover:bg-slate-900 hover:text-white">Donation</button>
 
@@ -81,13 +83,16 @@
   </section>
 
 </header>
+<!--*  header section end  -->
 
 
-<!--* main card section -->
-<main id="card-container" class=" w-[95%] md:w-4/5 mx-auto">
+
+<!--* main card section start -->
+<main id="card-container" class=" w-[95%] md:w-4/5 mx-auto mt-10">
 
   
-  <!--* card-one -->
+  <!--*-- card-one ----->
+
   <section class="card-one p-7 grid xl:grid-cols-2 border-2 border- rounded-3xl my-5" >
     <!--* img-contianer -->
     <div class="image-section">
@@ -97,7 +102,7 @@
     <!--* text-contianer -->
     <div class="text-content-section px-10  text-center xl:text-left">
           
-      <div class="balance flex items-center gap-2 min-w-[10rem] mt-10 xl:mt-0 mb-5 text-lg xl:m-0">
+      <div class="balance items-center gap-2 btn min-w-[10rem] mt-10 xl:mt-0 mb-5 text-lg m-auto xl:m-0">
         <img src="assets/coin.png">
         <span id="donatedAmount">0</span>
         <p>BDT</p>
@@ -125,7 +130,7 @@ efforts and making a positive impact on the lives of those in need.
 
     </div>
   </section>
-
+<!--! card end -->
 
 
 
@@ -142,7 +147,7 @@ efforts and making a positive impact on the lives of those in need.
     <!--* text-contianer -->
     <div class="text-content-section px-10  text-center xl:text-left">
           
-      <div class="balance flex items-center gap-2 btn w-[10rem] mt-10 xl:mt-0 mb-5 text-lg m-auto xl:m-0">
+      <div class="balance items-center gap-2 btn min-w-[10rem] mt-10 xl:mt-0 mb-5 text-lg m-auto xl:m-0">
         <img src="assets/coin.png">
         <span id="FdonatedAmount">0</span>
         <p>BDT</p>
@@ -172,6 +177,7 @@ efforts and making a positive impact on the lives of those in need.
 
     </div>
   </section>
+<!--! card end -->
 
 
 
@@ -186,7 +192,7 @@ efforts and making a positive impact on the lives of those in need.
     <!--* text-contianer -->
     <div class="text-content-section px-10  text-center xl:text-left">
           
-      <div class="balance flex items-center gap-2 btn w-[10rem] mt-10 xl:mt-0 mb-5 text-lg m-auto xl:m-0">
+      <div class="balance items-center gap-2 btn min-w-[10rem] mt-10 xl:mt-0 mb-5 text-lg m-auto xl:m-0">
         <img src="assets/coin.png">
         <span id="AiddonatedAmount">0</span>
         <p>BDT</p>
@@ -217,9 +223,10 @@ donation to support these brave individuals in their time of need.
 
     </div>
   </section>
+<!--! card end -->
 
 
-
+            <!--* modal area -->
   <dialog id="my_modal_1" class="modal">
     <div class="modal-box text-center">
       <h3 class="font-bold text-3xl mb-5">Congrates!</h3>
@@ -236,16 +243,19 @@ donation to support these brave individuals in their time of need.
       </div>
     </div>
   </dialog>
+<!--* modal end -->
 
 </main>
 
+
+<!--* history container -->
 <section id="history" class="hidden">
 
 </section>
 
 
 
-<footer class="h-40 bg-clrNutral300">
+<footer class="min-h-40 bg-clrNutral300">
 
 </footer>
 
