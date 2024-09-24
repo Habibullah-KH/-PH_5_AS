@@ -43,10 +43,10 @@
   <link rel="stylesheet" href="Allcode/style.css">
 
 </head>
-<body class="h-[100vh] w-[1920px] m-auto font-fontprimary text-clrNutral400 ">
+<body class="w-[1920px] m-auto font-fontprimary text-clrNutral400 ">
   
 
-<header class="fixed top-0 z-50 w-full m-auto">
+<header class="sticky top-0 z-50 w-full m-auto">
 
   <section class="nav text-2xl font-bold">
     <nav class="  text-clrNutral400 bg-[#FFFFFFB3] backdrop-blur-sm">
@@ -58,13 +58,13 @@
           </a>
     
           <div class="brand_logo flex items-center gap-2">
-            <img src="assets/logo.png">
+            <img class="hidden sm:block" src="assets/logo.png">
             <h1 class="hidden md:block">Donate Bangladesh</h1>
           </div>
     
           <div class="balance flex items-center gap-2">
             <img src="assets/coin.png">
-            <span>5000</span>
+            <span id="mainBalance">5000</span>
             <p>BDT</p>
           </div>
       </div>
@@ -72,6 +72,7 @@
 <div class="nav-button-section flex justify-center gap-5 pt-20 pb-10">
 
   <button id="donationBtn" class=" btn text-2xl font-semibold px-5 hover:bg-slate-900 hover:text-white">Donation</button>
+
   <button id="historyBtn" class="btn text-2xl font-semibold px-5 hover:bg-slate-900 hover:text-white">History</button>
 
 </div>
@@ -81,8 +82,9 @@
 
 </header>
 
+
 <!--* main card section -->
-<main id="card-container" class=" w-[95%] md:w-4/5 mx-auto mt-[20rem]">
+<main id="card-container" class=" w-[95%] md:w-4/5 mx-auto">
 
   
   <!--* card-one -->
@@ -95,13 +97,13 @@
     <!--* text-contianer -->
     <div class="text-content-section px-10  text-center xl:text-left">
           
-      <div class="balance flex items-center gap-2 btn w-[10rem] mt-10 xl:mt-0 mb-5 text-lg m-auto xl:m-0">
+      <div class="balance flex items-center gap-2 min-w-[10rem] mt-10 xl:mt-0 mb-5 text-lg xl:m-0">
         <img src="assets/coin.png">
         <span id="donatedAmount">0</span>
         <p>BDT</p>
       </div>
 
-      <h2 class="text-2xl font-semibold mb-5 mt-5">
+      <h2 id="noakhali" class="text-2xl font-semibold mb-5 mt-5">
         Donate for Flood at Noakhali, Bangladesh
       </h2>
 
@@ -117,7 +119,7 @@ efforts and making a positive impact on the lives of those in need.
         <input id="noakhaliInput" class=" w-full mb-5 p-5 rounded-xl border-2" type="number" placeholder="Write Donation Amount">
 
         <a>
-          <button onclick="my_modal_1.showModal()" class="btn text-2xl font-semibold px-5 bg-clrNutral200  hover:bg-slate-900 hover:text-white">Donate Now</button>
+          <button id="donateNowBtn" class="btn text-2xl font-semibold px-5 bg-clrNutral200  hover:bg-slate-900 hover:text-white">Donate Now</button>
           </a>
       </div>
 
@@ -125,7 +127,12 @@ efforts and making a positive impact on the lives of those in need.
   </section>
 
 
+
+
   <!--* card-two -->
+
+<!--* Inside this code i use cpitial 'F' before id's, this 'F' represent the first carecter of feni, so to saparate the id name I use this tecniqeu -->
+
   <section class="card-one p-7 grid xl:grid-cols-2 border-2 border- rounded-3xl my-5" >
     <!--* img-contianer -->
     <div class="image-section">
@@ -137,11 +144,11 @@ efforts and making a positive impact on the lives of those in need.
           
       <div class="balance flex items-center gap-2 btn w-[10rem] mt-10 xl:mt-0 mb-5 text-lg m-auto xl:m-0">
         <img src="assets/coin.png">
-        <span>0</span>
+        <span id="FdonatedAmount">0</span>
         <p>BDT</p>
       </div>
 
-      <h2 class="text-2xl font-semibold mb-5 mt-5">
+      <h2 id="feni" class="text-2xl font-semibold mb-5 mt-5">
         Donate for Flood Relief in Feni,BangIadesh
       </h2>
 
@@ -156,15 +163,17 @@ efforts and making a positive impact on the lives of those in need.
       </p>
 
       <div class="input-container flex flex-col mt-5 items-center 2xl:relative 2xl:top-6">
-        <input class=" w-full mb-5 p-5 rounded-xl border-2" type="number" placeholder="Write Donation Amount">
+        <input id="FiInput" class=" w-full mb-5 p-5 rounded-xl border-2" type="number" placeholder="Write Donation Amount">
 
         <a>
-          <button onclick="my_modal_1.showModal()" class="btn text-2xl font-semibold px-5 bg-clrNutral200  hover:bg-slate-900 hover:text-white">Donate Now</button>
+          <button id="FdonateNowBtn" class="btn text-2xl font-semibold px-5 bg-clrNutral200  hover:bg-slate-900 hover:text-white">Donate Now</button>
           </a>
       </div>
 
     </div>
   </section>
+
+
 
 
   <!--* card-three -->
@@ -179,11 +188,11 @@ efforts and making a positive impact on the lives of those in need.
           
       <div class="balance flex items-center gap-2 btn w-[10rem] mt-10 xl:mt-0 mb-5 text-lg m-auto xl:m-0">
         <img src="assets/coin.png">
-        <span>0</span>
+        <span id="AiddonatedAmount">0</span>
         <p>BDT</p>
       </div>
 
-      <h2 class="text-2xl font-semibold mb-5 mt-5">
+      <h2 id="aid" class="text-2xl font-semibold mb-5 mt-5">
         Aid for Injured in the Quota Movement
       </h2>
 
@@ -199,10 +208,10 @@ donation to support these brave individuals in their time of need.
       </p>
 
       <div class="input-container flex flex-col mt-5 items-center 2xl:relative 2xl:top-6">
-        <input class=" w-full mb-5 p-5 rounded-xl border-2" type="number" placeholder="Write Donation Amount">
+        <input id="AidInput" class=" w-full mb-5 p-5 rounded-xl border-2" type="number" placeholder="Write Donation Amount">
 
         <a>
-          <button onclick="my_modal_1.showModal()" class="btn text-2xl font-semibold px-5 bg-clrNutral200  hover:bg-slate-900 hover:text-white">Donate Now</button>
+          <button id="AiddonateNowBtn" class="btn text-2xl font-semibold px-5 bg-clrNutral200  hover:bg-slate-900 hover:text-white">Donate Now</button>
           </a>
       </div>
 
@@ -212,19 +221,31 @@ donation to support these brave individuals in their time of need.
 
 
   <dialog id="my_modal_1" class="modal">
-    <div class="modal-box">
-      <h3 class="text-lg font-bold">Hello!</h3>
-      <p class="py-4">Press ESC key or click the button below to close</p>
-      <div class="modal-action">
-        <form method="dialog">
+    <div class="modal-box text-center">
+      <h3 class="font-bold text-3xl mb-5">Congrates!</h3>
+
+      <img class="m-auto" src="assets/coin.png">
+
+      <p class="py-4">You Have Donated for Humankind</p>
+      <h3 class="font-bold text-xl">Successfully</h3>
+      <div class="modal-action ">
+        <form method="dialog" class="m-auto">
           <!-- if there is a button in form, it will close the modal -->
-          <button class="btn">Close</button>
+          <button id="modalBtn" class="btn  hover:bg-slate-900 hover:text-white">Close confirmation</button>
         </form>
       </div>
     </div>
   </dialog>
 
 </main>
+
+<section id="history">
+
+
+
+</section>
+
+
 
 <footer class="h-40 bg-clrNutral300">
 
