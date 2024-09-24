@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>donate-bangladesh</title>
+
+  <!--* Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+
+  <!--* Taiwind cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+        clrNutral100: '#585858',
+        clrNutral200: '#b4f461',
+        clrNutral300: '#f9f7f3',
+        clrNutral400: '#111111',
+          },
+
+          fontFamily: {
+            fontprimary: 'Lexend',
+          },
+        }
+      }
+    }
+  </script>
+
+<!--* font awesome -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!--* daisy Ul cdn -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="Allcode/style.css">
+
+</head>
+<body class="h-[100vh] w-[1920px] m-auto font-fontprimary text-clrNutral400 ">
+  
+
+<header class="fixed top-0 z-50 w-full m-auto">
+
+  <section class="nav text-2xl font-bold">
+    <nav class="  text-clrNutral400 bg-[#FFFFFFB3] backdrop-blur-sm">
+
+      <div class="nav-top-section flex justify-between bg-[#f9f7f3B3] p-10">
+
+        <a  href="./Allcode/qna.html" target="_blank">
+          <button class="btn text-2xl font-semibold px-5 bg-clrNutral200 hover:bg-slate-900 hover:text-white">Blog</button>
+          </a>
+    
+          <div class="brand_logo flex items-center gap-2">
+            <img src="assets/logo.png">
+            <h1 class="hidden md:block">Donate Bangladesh</h1>
+          </div>
+    
+          <div class="balance flex items-center gap-2">
+            <img src="assets/coin.png">
+            <span>5000</span>
+            <p>BDT</p>
+          </div>
+      </div>
+      
+<div class="nav-button-section flex justify-center gap-5 pt-20 pb-10">
+
+  <button id="donationBtn" class=" btn text-2xl font-semibold px-5 hover:bg-slate-900 hover:text-white">Donation</button>
+  <button id="historyBtn" class="btn text-2xl font-semibold px-5 hover:bg-slate-900 hover:text-white">History</button>
+
+</div>
+
+    </nav>
+  </section>
+
+</header>
+
+<!--* main card section -->
+<main id="card-container" class=" w-[95%] md:w-4/5 mx-auto mt-[20rem]">
+
+  
+  <!--* card-one -->
+  <section class="card-one p-7 grid xl:grid-cols-2 border-2 border- rounded-3xl my-5" >
+    <!--* img-contianer -->
+    <div class="image-section">
+      <img src="assets/noakhali.png" class="w-full h-full">
+    </div>
+
+    <!--* text-contianer -->
+    <div class="text-content-section px-10  text-center xl:text-left">
+          
+      <div class="balance flex items-center gap-2 btn w-[10rem] mt-10 xl:mt-0 mb-5 text-lg m-auto xl:m-0">
+        <img src="assets/coin.png">
+        <span id="donatedAmount">0</span>
+        <p>BDT</p>
+      </div>
+
+      <h2 class="text-2xl font-semibold mb-5 mt-5">
+        Donate for Flood at Noakhali, Bangladesh
+      </h2>
+
+      <p class=" text-clrNutral100 text-sm lg:text-xl">
+The recent floods in Noakhali have caused significant damage to
+homes infrastructure. Your donation will help provide essential
+supplies and to those affected by this disaster. Every contribution,
+big or small, makes difference. Please join us in supporting the relief
+efforts and making a positive impact on the lives of those in need.
+      </p>
+
+      <div class="input-container flex flex-col mt-5 items-center 2xl:relative 2xl:top-6">
+        <input id="noakhaliInput" class=" w-full mb-5 p-5 rounded-xl border-2" type="number" placeholder="Write Donation Amount">
+
+        <a>
+          <button onclick="my_modal_1.showModal()" class="btn text-2xl font-semibold px-5 bg-clrNutral200  hover:bg-slate-900 hover:text-white">Donate Now</button>
+          </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!--* card-two -->
+  <section class="card-one p-7 grid xl:grid-cols-2 border-2 border- rounded-3xl my-5" >
+    <!--* img-contianer -->
+    <div class="image-section">
+      <img src="assets/feni.png" class="w-full h-full">
+    </div>
+
+    <!--* text-contianer -->
+    <div class="text-content-section px-10  text-center xl:text-left">
+          
+      <div class="balance flex items-center gap-2 btn w-[10rem] mt-10 xl:mt-0 mb-5 text-lg m-auto xl:m-0">
+        <img src="assets/coin.png">
+        <span>0</span>
+        <p>BDT</p>
+      </div>
+
+      <h2 class="text-2xl font-semibold mb-5 mt-5">
+        Donate for Flood Relief in Feni,BangIadesh
+      </h2>
+
+      <p class=" text-clrNutral100 text-sm lg:text-xl">
+        The recent floods in Feni have devastated local communities, leading
+        to severe disruption and loss. Your generous donation will help
+        provide immediate aid, including food, clean water, and medical
+        supplies, to those affected by this calamity. Together, we can offer
+        crucial support and help rebuild lives in the aftermath of this disaster.
+        Every contribution counts towards making a real difference. Please
+        consider donating today to assist those in urgent need.
+      </p>
+
+      <div class="input-container flex flex-col mt-5 items-center 2xl:relative 2xl:top-6">
+        <input class=" w-full mb-5 p-5 rounded-xl border-2" type="number" placeholder="Write Donation Amount">
+
+        <a>
+          <button onclick="my_modal_1.showModal()" class="btn text-2xl font-semibold px-5 bg-clrNutral200  hover:bg-slate-900 hover:text-white">Donate Now</button>
+          </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!--* card-three -->
+  <section class="card-one p-7 grid xl:grid-cols-2 border-2 border- rounded-3xl my-5" >
+    <!--* img-contianer -->
+    <div class="image-section">
+      <img src="assets/quota-protest.png" class="w-full h-full">
+    </div>
+
+    <!--* text-contianer -->
+    <div class="text-content-section px-10  text-center xl:text-left">
+          
+      <div class="balance flex items-center gap-2 btn w-[10rem] mt-10 xl:mt-0 mb-5 text-lg m-auto xl:m-0">
+        <img src="assets/coin.png">
+        <span>0</span>
+        <p>BDT</p>
+      </div>
+
+      <h2 class="text-2xl font-semibold mb-5 mt-5">
+        Aid for Injured in the Quota Movement
+      </h2>
+
+      <p class=" text-clrNutral100 text-sm lg:text-xl">
+        The recent Quota movement has resulted in numerous injuries and
+significant hardship for many individuals. Your support is crucial in
+providing medical assistance, rehabilitation, and necessary supplies
+to those affected. By contributing, you help ensure that injured
+individuals receive the care and support they need during this
+challenging time. Every donation plays a vital role in alleviating their
+suffering and aiding in their recovery. Please consider making a
+donation to support these brave individuals in their time of need.
+      </p>
+
+      <div class="input-container flex flex-col mt-5 items-center 2xl:relative 2xl:top-6">
+        <input class=" w-full mb-5 p-5 rounded-xl border-2" type="number" placeholder="Write Donation Amount">
+
+        <a>
+          <button onclick="my_modal_1.showModal()" class="btn text-2xl font-semibold px-5 bg-clrNutral200  hover:bg-slate-900 hover:text-white">Donate Now</button>
+          </a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <dialog id="my_modal_1" class="modal">
+    <div class="modal-box">
+      <h3 class="text-lg font-bold">Hello!</h3>
+      <p class="py-4">Press ESC key or click the button below to close</p>
+      <div class="modal-action">
+        <form method="dialog">
+          <!-- if there is a button in form, it will close the modal -->
+          <button class="btn">Close</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+</main>
+
+<footer class="h-40 bg-clrNutral300">
+
+</footer>
+
+<!--*--------------------------------------------------------->
+
+<!--* script area ↡-->
+
+  <script src="Allcode/script.js"></script>
+  <script src="Allcode/utilities..js"></script>
+
+  <!--* daisyui -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
