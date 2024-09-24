@@ -182,6 +182,13 @@ FdonateNowBtn.addEventListener('click', function(){
  
    console.log('clicked', sum, newAmount, toNum, availableBal );
  
+   if(FiInput.value === ''){
+
+    alert('Please enter a value in the input field.');
+    return;
+  }
+
+
 
      //* select card title
   document.getElementById('feni')
@@ -212,6 +219,9 @@ FdonateNowBtn.addEventListener('click', function(){
   
     </div>
     `
+
+      // donateNowBtn.showModal()
+  document.getElementById('my_modal_1').showModal()
  })
 
 
@@ -271,6 +281,13 @@ AiddonateNowBtn.addEventListener('click', function(){
  
    console.log('clicked', sum, newAmount, toNum, availableBal );
  
+  
+   if(AidInput.value === ''){
+
+    alert('Please enter a value in the input field.');
+    return;
+  }
+
    
   //* select card title
   document.getElementById('aid')
@@ -301,5 +318,6 @@ AiddonateNowBtn.addEventListener('click', function(){
   
     </div>
     `
-
+  // donateNowBtn.showModal()
+  document.getElementById('my_modal_1').showModal()
  })
