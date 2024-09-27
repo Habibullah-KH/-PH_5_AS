@@ -8,7 +8,7 @@ document.getElementById('history');
 
 //* Donate button click to visible section
 donationBtn.addEventListener('click', function(){
-  console.log('clicked');
+  // console.log('clicked');
   enableVisible('card-container');
   donationBtn.classList.add('bg-lime-400');
   historyBtn.classList.remove('bg-lime-400');
@@ -16,7 +16,7 @@ donationBtn.addEventListener('click', function(){
 
 //* History button click to visible section
 historyBtn.addEventListener('click', function(){
-  console.log('clicked');
+  // console.log('clicked');
   enableVisible('history');
   donationBtn.classList.remove('bg-lime-400');
   historyBtn.classList.add('bg-lime-400');
@@ -62,13 +62,19 @@ e.target.value = '';
 //* Donate now button click function
 donateNowBtn.addEventListener('click', function(){
   
- const toNum = parseFloat(totalDonatedAmount.innerText);
- const mainBal = parseFloat(mainBalance.innerText);
+  const toNum = parseFloat(totalDonatedAmount.innerText);
+  const mainBal = parseFloat(mainBalance.innerText);
 
-  if (sum > mainBal) {
+
+  if (sum > mainBal || sum !== NaN) {
    alert('Donation amount larger then available balance! please recharge');
    return;
  }
+// else if(){
+
+//   alert('Plese provide a number');
+//   return;
+// }
 
  let newAmount = toNum + sum;
  totalDonatedAmount.innerText = newAmount;
@@ -77,7 +83,7 @@ donateNowBtn.addEventListener('click', function(){
 
  mainBalance.innerText = availableBal;
 
-  console.log('clicked', sum, newAmount, toNum, availableBal );
+  // console.log('clicked', sum, newAmount, toNum, availableBal );
   
   if(noakhaliInput.value === ''){
 
@@ -279,7 +285,7 @@ AiddonateNowBtn.addEventListener('click', function(){
   mainBalance.innerText = availableBal;
  
  
-   console.log('clicked', sum, newAmount, toNum, availableBal );
+  //  console.log('clicked', sum, newAmount, toNum, availableBal );
  
   
    if(AidInput.value === ''){
